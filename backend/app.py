@@ -22,7 +22,8 @@ app.add_middleware(
 )
 
 # Load model
-MODEL_PATH = "backend/model_clean.joblib"
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "model_clean.joblib")
+
 model = joblib.load(MODEL_PATH)
 
 # Get YouTube API key
