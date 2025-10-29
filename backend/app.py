@@ -13,6 +13,7 @@ load_dotenv()
 app = FastAPI()
 
 # Allow frontend access (React running on port 3000)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
